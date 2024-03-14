@@ -13,3 +13,5 @@ def chercher(tab, x, i, j):
         return m
 
 print(chercher([1, 5, 6, 6, 9, 12], 7, 0, 10))
+
+#marche pas encore
