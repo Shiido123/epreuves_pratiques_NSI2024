@@ -4,6 +4,7 @@ dico = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6,
         "R": 18, "S": 19, "T": 20, "U": 21, "V": 22,
         "W": 23, "X": 24, "Y": 25, "Z": 26}
 
+
 def codes_parfait(mot):
     """Renvoie un triplet 
     (code_additionne, code_concatene, mot_est_parfait) où :
@@ -11,12 +12,13 @@ def codes_parfait(mot):
     - code_concatene est le code des lettres du mot concaténées ;
     - mot_est_parfait est un booléen indiquant si le mot est parfait."""
     code_concatene = ""
-    code_additionne = ... 
+    code_additionne = 0
     for c in mot:
-        code_concatene = code_concatene + ... 
-        code_additionne = code_additionne + ... 
+        code_concatene = code_concatene + str(dico[c])
+        code_additionne = code_additionne + dico[c]
     code_concatene = int(code_concatene)
-    mot_est_parfait = ... 
+    mot_est_parfait = code_concatene % code_additionne == 0
     return code_additionne, code_concatene, mot_est_parfait
 
-
+print(codes_parfait("PAUL"))
+print(codes_parfait("ALAIN"))
