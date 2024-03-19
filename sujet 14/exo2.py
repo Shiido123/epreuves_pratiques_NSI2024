@@ -8,7 +8,7 @@ class Carte:
     def recuperer_valeur(self):
         """ Renvoie la valeur de la carte : 
         As, 2, ..., 10, Valet, Dame, Roi """
-        valeurs = ['As','2', '3', '4', '5', '6', '7', '8', 
+        valeurs = ['As', '2', '3', '4', '5', '6', '7', '8',
                    '9', '10', 'Valet', 'Dame', 'Roi']
         return valeurs[self.valeur - 1]
 
@@ -18,20 +18,26 @@ class Carte:
         couleurs = ['pique', 'coeur', 'carreau', 'trèfle']
         return couleurs[self.couleur - 1]
 
+
 class Paquet_de_cartes:
     def __init__(self):
         """ Initialise l'attribut contenu avec une liste des 52
         objets Carte possibles rangés par valeurs croissantes en
         commençant par pique, puis cœur, carreau et trèfle. """
-        ...
-        ...
-            ...
-                ...
+        self.contenu = [Carte(couleur, valeur)
+                        for couleur in range(1, 5) for valeur in range(1, 14)]
 
     def recuperer_carte(self, pos):
         """ Renvoie la carte qui se trouve à la position pos 
         (entier compris entre 0 et 51). """
-        ...
-        ...
+        assert 0 <= pos <= 51, "paramètre pos invalide"
+        return self.contenu[pos]
 
 
+jeu = Paquet_de_cartes()
+carte1 = jeu.recuperer_carte(20)
+print(carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur())
+carte2 = jeu.recuperer_carte(0)
+print(carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur())
+
+carte3 = jeu.recuperer_carte(52)
