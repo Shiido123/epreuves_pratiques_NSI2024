@@ -13,16 +13,19 @@ class Noeud:
             if self.gauche != None:
                 cle = self.gauche
             else:
-                self.gauche = self.etiquette
+                self.gauche = Noeud(cle)
         else:
-            ...
-                ...
+            if self.droit != None:
+                cle = self.droit
             else:
-                ... = Noeud(cle) 
+                self.droit = Noeud(cle)
+
 
 arbre = Noeud(7)
 for cle in (3, 9, 1, 6):
     arbre.inserer(cle)
 
 print(arbre.gauche.etiquette)
-
+print(arbre.droit.etiquette)
+print(arbre.gauche.gauche.etiquette)
+print(arbre.gauche.droit.etiquette)
