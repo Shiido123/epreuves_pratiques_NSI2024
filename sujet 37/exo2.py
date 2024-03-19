@@ -7,9 +7,9 @@ def tri(tab):
         if tab[i] == 0:
             i = i + 1
         else:
-            valeur = tab[i]
-            tab[i] = tab[j]
-            tab[j] = valeur
+            valeur = tab[j]
+            tab[j] = tab[i]
+            tab[i] = valeur
             j = j - 1
 
 
