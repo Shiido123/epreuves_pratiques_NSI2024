@@ -29,13 +29,13 @@ class Carre:
     def est_semimagique(self): 
         s = self.somme_ligne(0) 
         #test de la somme de chaque ligne 
-        for i in range(s): 
-            if sum(i) != s: 
+        for i in range(self.ordre): 
+            if self.ordre != s: 
                 return False 
                                    
         #test de la somme de chaque colonne 
-        for j in range(self.somme_col(0)): 
-            if sum(j) != s: 
+        for j in range(self.somme_col(self.ordre)): 
+            if self.somme_col(j) != s: 
                 return False 
                                    
         return True
@@ -45,3 +45,4 @@ lst_c3 = [3, 4, 5, 4, 4, 4, 5, 4, 3]
 c3 = Carre(lst_c3, 3)
 c3.affiche()
 print(c3.somme_col(0))
+print(c3.est_semimagique())
