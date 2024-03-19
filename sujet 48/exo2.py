@@ -10,7 +10,7 @@ def nombre_suivant(s):
         else:
             resultat += str(compte) + chiffre
             chiffre = s[i]
-            comtpe = 1
+            compte = 1
     lecture_chiffre = str(compte) + chiffre
     resultat += lecture_chiffre
     return resultat
