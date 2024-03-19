@@ -11,7 +11,7 @@ def voisinage(n, ligne, colonne):
 
 def incremente_voisins(grille, ligne, colonne):
     """ Incrémente de 1 toutes les cases voisines d'une bombe."""
-    voisins = voisinage(5, ligne, colonne)
+    voisins = voisinage(len(grille), ligne, colonne)
     for l, c in voisins:
         if grille[l][c] != -1:  # si ce n'est pas une bombe
             grille[l][c] += 1  # on ajoute 1 à sa valeur
