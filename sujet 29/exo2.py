@@ -10,8 +10,8 @@ def ligne_suivante(ligne):
 def pascal(n):
     '''Renvoie le triangle de Pascal de hauteur n'''
     triangle = [[1]]
-    for k in range(n - 1):
-        ligne_k = ligne_suivante(triangle[k-1])
+    for k in range(n):
+        ligne_k = ligne_suivante(triangle[k])
         triangle.append(ligne_k)
     return triangle
 
