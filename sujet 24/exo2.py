@@ -20,4 +20,4 @@ def somme_max(tab):
 print(somme_max([1, 2, 3, 4, 5]))
 print(somme_max([1, 2, -3, 4, 5]))
 print(somme_max([1, 2, -2, 4, 5]))
-print(somme_max([1, -2, 3, 10, -4, 7, 2, -5]))  # marche pas encore
+print(somme_max([1, -2, 3, 10, -4, 7, 2, -5]))
