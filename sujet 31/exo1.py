@@ -3,8 +3,12 @@ def multiplication(n1, n2):
     if n1 == 0 or n2 == 0:
         return 0
 
-    for _ in range(abs(n2)):
-        result += n1
+    if n2 > 0:
+        for _ in range(abs(n2)):
+            result += n1
+    else:
+        for _ in range(abs(n1)):
+            result += n2
 
     if n1 < 0 and n2 < 0:
         result = abs(result)
