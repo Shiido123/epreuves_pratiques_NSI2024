@@ -1,12 +1,12 @@
 def delta(liste):
-    nouvelle_liste = []
-    if len(liste) == 1:
-        return [liste[0]]
+    if not liste:
+        return []
 
-    for indice in range(len(liste)-1):
-        nouvelle_liste.append(liste[indice+1] - liste[indice])
-    return nouvelle_liste
+    delta_liste = [liste[0]]
+    for i in range(1, len(liste)):
+        delta_liste.append(liste[i] - liste[i - 1])
 
+    return delta_liste
 
 print(delta([1000, 800, 802, 1000, 1003]))
 print(delta([42]))
