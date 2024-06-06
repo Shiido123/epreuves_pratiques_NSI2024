@@ -15,8 +15,8 @@ def positifs(pile):
     while pile != []:
         valeur = pile.pop()
         if valeur >= 0:
-            pile_positifs.insert(0, valeur)
-    return pile_positifs
+            pile_positifs.append(valeur)
+    return renverse(pile_positifs)
 
 
 print(renverse([1, 2, 3, 4, 5]))
