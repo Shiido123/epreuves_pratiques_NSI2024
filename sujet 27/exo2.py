@@ -13,6 +13,7 @@ def colore_comp1(M, i, j, val):
     if j-1:  # propage en bas
         colore_comp1(M, i, j-1, val)
 
+
 M = [[0, 0, 1, 0], [0, 1, 0, 1], [1, 1, 1, 0], [0, 1, 1, 0]]
 colore_comp1(M, 2, 1, 3)
 print(M)
