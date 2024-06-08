@@ -8,9 +8,9 @@ def colore_comp1(M, i, j, val):
         colore_comp1(M, i-1, j, val)
     if i+1 < len(M):  # propage à droite
         colore_comp1(M, i+1, j, val)
-    if j+1:  # propage en haut
+    if j+1 < len(M[0]):  # propage en haut
         colore_comp1(M, i, j+1, val)
-    if j-1:  # propage en bas
+    if j-1 >= 0:  # propage en bas
         colore_comp1(M, i, j-1, val)
 
 
