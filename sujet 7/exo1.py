@@ -1,8 +1,10 @@
 def gb_vers_entier(tab):
     entier = 0
-    for indice, valeur in enumerate(reversed(tab)):
-        if valeur == True:
-            entier += 2**indice
+    longueur = len(tab)
+
+    for i in range(longueur):
+        if tab[i]:
+            entier += 2 ** (longueur - i - 1)
 
     return entier
 
