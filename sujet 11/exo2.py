@@ -11,12 +11,12 @@ class Noeud:
         en préservant sa structure.'''
         if cle < self.etiquette:
             if self.gauche != None:
-                cle = self.gauche
+                self.gauche.inserer(cle)
             else:
                 self.gauche = Noeud(cle)
         else:
             if self.droit != None:
-                cle = self.droit
+                self.droit.inserer(cle)
             else:
                 self.droit = Noeud(cle)
 

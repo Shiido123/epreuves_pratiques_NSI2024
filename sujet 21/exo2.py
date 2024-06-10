@@ -17,5 +17,6 @@ def accessibles(adj, x):
     parcours(adj, x, acc)
     return acc
 
+
 print(accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 0))
 print(accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 4))
