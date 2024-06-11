@@ -11,8 +11,8 @@ def effectif_notes(tab: list):
 
 def notes_triees(effectif_notes: list):
     notes_triees = []
-    for indice, valeur in enumerate(effectif_notes):
-        for _ in range(valeur):
+    for indice in range(len(effectif_notes)):
+        for _ in range(effectif_notes[indice]):
             notes_triees.append(indice)
 
     return notes_triees
