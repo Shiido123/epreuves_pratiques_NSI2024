@@ -1,6 +1,6 @@
 def max_dico(dico):
     maxi = ("Antoine le bot", 0)
-    for cle in dico.keys():
+    for cle in dico:
         if dico[cle] > maxi[1]:
             maxi = (cle, dico[cle])
 

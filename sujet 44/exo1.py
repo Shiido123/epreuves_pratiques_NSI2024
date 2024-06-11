@@ -1,10 +1,10 @@
 def enumere(tab: list):
     dico = {}
-    for indice, valeur in enumerate(tab):
-        if valeur in dico:
-            dico[valeur].append(indice)
+    for indice in range(len(tab)):
+        if tab[indice] in dico:
+            dico[tab[indice]].append(indice)
         else:
-            dico[valeur] = [indice]
+            dico[tab[indice]] = [indice]
     return dico
 
 

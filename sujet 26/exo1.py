@@ -1,14 +1,14 @@
 def ajoute_dictionnaires(d1, d2):
     nv_dico = {}
 
-    for cle, valeur in d1.items():
-        nv_dico[cle] = valeur
+    for cle in d1:
+        nv_dico[cle] = d1[cle]
 
-    for cle, valeur in d2.items():
+    for cle in d2:
         if cle in nv_dico:
-            nv_dico[cle] += valeur
+            nv_dico[cle] += d2[cle]
         else:
-            nv_dico[cle] = valeur
+            nv_dico[cle] = d2[cle]
 
     return nv_dico
 
